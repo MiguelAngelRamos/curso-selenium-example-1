@@ -34,4 +34,3 @@ class LoginPage:
 
     def get_feedback_test(self) -> str:
         return self.driver.find_element(*self.FEEDBACK).text
-    
