@@ -35,5 +35,13 @@ def test_login_with_csv(driver, username, password):
         expected = 'welcome.html'
         actual = driver.current_url
         assert expected in actual
+    else:
+        WebDriverWait(driver, 10).until(lambda d: d.find_element(By.ID, 'feedback').text.strip() != '');
+        
+        expected_non_empty = True
+        actual_feedback = page.get_feedback_test().strip()
+
+        assert(actual_feedback != '') is expected_non_empty
+    
     
 

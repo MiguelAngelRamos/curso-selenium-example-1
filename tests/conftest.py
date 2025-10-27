@@ -4,6 +4,7 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 
 
+@pytest.fixture()
 def driver():
     ## Patrón AAA (Preparación - Arrange )
     service = ChromeService(ChromeDriverManager().install())

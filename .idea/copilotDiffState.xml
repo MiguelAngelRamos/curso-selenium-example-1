@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/tests/conftest.py">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/tests/conftest.py" />
+              <option name="originalContent" value="import pytest&#10;from selenium import webdriver&#10;from selenium.webdriver.chrome.service import Service as ChromeService&#10;from webdriver_manager.chrome import ChromeDriverManager&#10;&#10;&#10;def driver():&#10;    ## Patrón AAA (Preparación - Arrange )&#10;    service = ChromeService(ChromeDriverManager().install())&#10;    options = webdriver.ChromeOptions()&#10;    driver = webdriver.Chrome(service=service, options=options)&#10;    driver.maximize_window()&#10;&#10;    yield driver&#10;&#10;    ## TEARDOWN&#10;    driver.quit()" />
+              <option name="updatedContent" value="import pytest&#13;&#10;from selenium import webdriver&#13;&#10;from selenium.webdriver.chrome.service import Service as ChromeService&#13;&#10;from webdriver_manager.chrome import ChromeDriverManager&#13;&#10;&#13;&#10;&#13;&#10;@pytest.fixture()&#13;&#10;def driver():&#13;&#10;    ## Patrón AAA (Preparación - Arrange )&#13;&#10;    service = ChromeService(ChromeDriverManager().install())&#13;&#10;    options = webdriver.ChromeOptions()&#13;&#10;    driver = webdriver.Chrome(service=service, options=options)&#13;&#10;    driver.maximize_window()&#13;&#10;&#13;&#10;    yield driver&#13;&#10;&#13;&#10;    ## TEARDOWN&#13;&#10;    driver.quit()" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
