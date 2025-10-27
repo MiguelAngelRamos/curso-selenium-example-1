@@ -28,5 +28,12 @@ def test_login_with_csv(driver, username, password):
     page.enter_username(username)
     page.enter_password(password)
     page.click_login()
+
+    if username == 'demo.user' and password == 'password123':
+        WebDriverWait(driver, 10).until(EC.url_contains('welcome.html'));
+        ## ASSERT
+        expected = 'welcome.html'
+        actual = driver.current_url
+        assert expected in actual
     
 
